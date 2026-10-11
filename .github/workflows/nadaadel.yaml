@@ -20,6 +20,9 @@ jobs:
     if: ${{ inputs.env == 'prod' }}
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
       - name: Say hello from production
         run: echo "Hello from PROD"
 
@@ -30,6 +33,9 @@ jobs:
     if: ${{ inputs.env == 'dev' }}
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
       - name: Say hello from development
         run: echo "Hello from DEV"
 
@@ -40,6 +46,9 @@ jobs:
     if: ${{ inputs.env == 'qa' }}
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
       - name: Say hello from QA
         run: echo "Hello from QA"
 
