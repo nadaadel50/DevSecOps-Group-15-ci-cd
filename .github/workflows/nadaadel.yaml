@@ -25,6 +25,9 @@ jobs:
       - name: Display message file
         run: cat message.txt
 
+      - name: What files are here?"
+        run: ls -al
+
   dev-job:
     if: ${{ inputs.env == 'dev' }}
     runs-on: ubuntu-latest
@@ -35,6 +38,9 @@ jobs:
       - name: Display message file
         run: cat message.txt
 
+      - name: What files are here?"
+        run: ls -al
+
   qa-job:
     if: ${{ inputs.env == 'qa' }}
     runs-on: ubuntu-latest
@@ -44,3 +50,6 @@ jobs:
 
       - name: Display message file
         run: cat message.txt
+
+      - name: What files are here?"
+        run: ls -al
